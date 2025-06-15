@@ -1,5 +1,4 @@
 package com.carlosborges.movieflix.controller;
-
 import com.carlosborges.movieflix.config.TokenService;
 import com.carlosborges.movieflix.controller.request.LoginRequest;
 import com.carlosborges.movieflix.controller.request.UserRequest;
@@ -16,7 +15,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +31,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<UserResponse> registar(@RequestBody UserRequest request) {
-        User savedUser = userService.saveUser(UserMapper.toUser(request));
+        User savedUser = userService.saveUser(UserMapper.toUser(request  ));
         return ResponseEntity.status(HttpStatus.CREATED).body(UserMapper.toUserResponse(savedUser));
     }
 
