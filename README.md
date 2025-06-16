@@ -11,7 +11,6 @@ API REST para gerenciamento de filmes, usuários e categorias, desenvolvida com 
 - **Spring Data JPA**
 - **Spring Security**
 - **PostgreSQL (PgAdmin)**
-- **MongoDB (NoSQL)**
 - **Flyway (Migrations)**
 - **Maven**
 - **Postman**
